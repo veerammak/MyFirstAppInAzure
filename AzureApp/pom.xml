@@ -80,6 +80,22 @@
 			<artifactId>spring-cloud-azure-starter</artifactId>
 		</dependency>
 	</dependencies>
+	<profiles>
+	<profile>
+    <id>MySQL</id>
+    <activation>
+        <activeByDefault>true</activeByDefault>
+    </activation>
+    <properties>
+        <db.script>mysql</db.script>
+        <jpa.database>MYSQL</jpa.database>
+        <jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
+        <jdbc.url>jdbc:mysql://${DOLLAR}{MYSQL_SERVER_FULL_NAME}:3306/${DOLLAR}{MYSQL_DATABASE_NAME}?useUnicode=true</jdbc.url>
+        <jdbc.username>${DOLLAR}{MYSQL_SERVER_ADMIN_LOGIN_NAME}@${DOLLAR}{MYSQL_SERVER_FULL_NAME}</jdbc.username>
+        <jdbc.password>${DOLLAR}{MYSQL_SERVER_ADMIN_PASSWORD}</jdbc.password>
+    </properties>
+</profile>
+</profiles>
 
 	<build>
 		<plugins>
@@ -110,6 +126,24 @@
       <javaVersion>Java 8</javaVersion>
       <webContainer>TOMCAT 9.0</webContainer>
     </runtime>
+    <appSettings>
+      <property>
+        <name>MYSQL_SERVER_FULL_NAME</name>
+        <value>${MYSQL_SERVER_FULL_NAME}</value>
+      </property>
+      <property>
+        <name>MYSQL_SERVER_ADMIN_LOGIN_NAME</name>
+        <value>${MYSQL_SERVER_ADMIN_LOGIN_NAME}</value>
+      </property>
+      <property>
+        <name>MYSQL_SERVER_ADMIN_PASSWORD</name>
+        <value>${MYSQL_SERVER_ADMIN_PASSWORD}</value>
+      </property>
+      <property>
+        <name>MYSQL_DATABASE_NAME</name>
+        <value>${MYSQL_DATABASE_NAME}</value>
+      </property>
+    </appSettings>
     <deployment>
       <resources>
         <resource>
