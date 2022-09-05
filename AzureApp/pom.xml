@@ -105,7 +105,6 @@
     <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>
     <appName>${WEBAPP_NAME}</appName>
     <region>${REGION}</region>
-    <pricingTier>P1v2</pricingTier>
     <runtime>
       <os>Linux</os>
       <javaVersion>Java 8</javaVersion>
