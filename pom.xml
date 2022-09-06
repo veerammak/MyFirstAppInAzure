@@ -156,7 +156,32 @@
     </deployment>
   </configuration>
 </plugin>
-			
+			<plugin>
+    <groupId>org.codehaus.cargo</groupId>
+    <artifactId>cargo-maven3-plugin</artifactId>
+    <version>1.9.11</version>
+    <configuration>
+        <container>
+            <containerId>tomcat9x</containerId>
+            <type>installed</type>
+            <home>${TOMCAT_HOME}</home>
+        </container>
+        <configuration>
+            <type>existing</type>
+            <home>${TOMCAT_HOME}</home>
+        </configuration>
+        <deployables>
+            <deployable>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>${project.artifactId}</artifactId>
+                <type>war</type>
+                <properties>
+                    <context>/</context>
+                </properties>
+            </deployable>
+        </deployables>
+    </configuration>
+</plugin>
 		</plugins>
 	</build>
 
