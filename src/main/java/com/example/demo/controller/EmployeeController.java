@@ -21,12 +21,12 @@ public class EmployeeController {
 	@Autowired
 	private EmployeeService employeeService;
 
-	@GetMapping
+	@GetMapping(value = "/all")
 	public ResponseEntity<List<Employee>> getAllEmployees() {
 		return new ResponseEntity<List<Employee>>(employeeService.getAllEmployees(), HttpStatus.OK);
 	}
 	
-	@PostMapping
+	@PostMapping(value = "/add")
 	public ResponseEntity<String> addEmployee(@RequestBody Employee employee) {
 		return new ResponseEntity<String>(employeeService.addEmployee(employee), HttpStatus.OK);
 	}
