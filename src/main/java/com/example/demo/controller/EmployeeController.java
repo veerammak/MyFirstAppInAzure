@@ -28,6 +28,6 @@ public class EmployeeController {
 	
 	@PostMapping(value = "/add")
 	public ResponseEntity<String> addEmployee(@RequestBody Employee employee) {
-		return new ResponseEntity<String>(employeeService.addEmployee(employee), HttpStatus.OK);
+		return new ResponseEntity<String>("Hello World", HttpStatus.OK);
 	}
 }
