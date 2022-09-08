@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>AzureApp</artifactId>
+	<artifactId>MyFirstAppInAzure</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>AzureApp</name>
+	<name>MyFirstAppInAzure</name>
 	<description>Azure project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
