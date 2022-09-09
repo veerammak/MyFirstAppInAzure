@@ -81,8 +81,8 @@
 					<schemaVersion>V2</schemaVersion>
 					<resourceGroup>DefaultResourceGroup-CUS</resourceGroup>
 					<appName>MyFirstAppInAzure</appName>
-					<region>EastAsia</region>
-					<pricingTier>F1</pricingTier>
+					<region>East Asia</region>
+					<pricingTier>P1V2</pricingTier>
 					<runtime>
 						<os>linux</os>
 						<javaVersion>Java 8</javaVersion>
