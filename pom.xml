@@ -85,8 +85,8 @@
 					<pricingTier>F1</pricingTier>
 					<runtime>
 						<os>linux</os>
-						<javaVersion>8</javaVersion>
-						<webContainer>8</webContainer>
+						<javaVersion>Java 8</javaVersion>
+						<webContainer>Java SE</webContainer>
 					</runtime>
 					<!-- Begin of App Settings -->
 					<appSettings>
