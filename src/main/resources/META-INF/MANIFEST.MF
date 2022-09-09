@@ -1,6 +1,7 @@
 Manifest-Version: 1.0
-Build-Jdk-Spec: 17
-Implementation-Title: AzureAppWIthSQLServer
+Build-Jdk-Spec: 8
+Implementation-Title: MyFirstAppInAzure
+Main-Class: com.example.demo.AzureAppApplication
 Implementation-Version: 0.0.1-SNAPSHOT
 Created-By: Maven Integration for Eclipse
 
