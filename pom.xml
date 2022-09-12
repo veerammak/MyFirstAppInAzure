@@ -13,7 +13,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>MyFirstAppInAzure</name>
 	<description>Azure project for Spring Boot</description>
-	<packaging>war</packaging>
 	<properties>
 		<java.version>1.8</java.version>
 		<spring-cloud-azure.version>4.3.0</spring-cloud-azure.version>
